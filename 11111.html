@@ -1,0 +1,60 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="trabalho.css">
+        <title>Exemplo</title>
+    </head>
+    <style>
+        hr {
+            height: 2px;
+            background-color: rgb(0, 0, 0);
+            border: none;
+        }
+    </style>
+    <body>
+        <div>
+            <b>
+            <h1>Formulário de contato</h1>
+            <h3>Preencha todos os campos.</h3>
+            </b>
+            <hr>
+            <form method= "post" action="pagdestino.html">
+    
+                <br>
+    
+                <b>Nome:</b> <input id="idnome" type="text" placeholder="Nome completo" class="input-class" required/> 
+                
+                <br><br>
+                
+                <b>E-mail:</b> <input id="idemail" type="email" placeholder="E-mail válido" class="input-email" required/> 
+                
+                <br><br>
+    
+                <b>Assunto:</b>
+    
+                <select id="idassunto"name="assunto" class="input-assunto" required>
+                    <option value=""></option>
+                    <option value="Dúvidas do produto">Dúvidas do produto</option>
+                    <option value="Atraso na entrega">Atraso na entrega</option>
+                </select>
+    
+                <br><br><br>
+    
+                <b>Mensagem:</b>
+    
+                <textarea id="idobs" name="idobs" placeholder="Sua mensagem" class="input-msg"></textarea>
+    
+                <br> <br><br><br><br><br><br>
+    
+                <button type="enviar">Enviar</button>
+    
+    
+            </form>
+        </div>
+    </body>
+    
+    
+    </html>
