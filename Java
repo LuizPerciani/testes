@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+public class ProjetoAula2 {
+    
+    public static void main(String[] args) {
+        int horas, minutos, total;
+        
+        horas = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite as horas (h):", "Dado",
+                JOptionPane.INFORMATION_MESSAGE));
+        
+        minutos = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite os minutos (min)", "Dado",
+                JOptionPane.INFORMATION_MESSAGE));
+        
+        total = (horas*60) + minutos;
+        
+        JOptionPane.showMessageDialog (null, "O total é : " + total + " minutos. ", "Total de minutos",
+        JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+}
+    
