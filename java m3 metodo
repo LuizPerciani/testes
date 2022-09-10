@@ -1,0 +1,29 @@
+import javax.swing.JOptionPane;
+
+public class ProjetoAula2 {
+    
+    public static void main(String[] args) {
+        float largura, altura, profundidade;
+        
+        largura = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite a largura (cm):", "Dado",
+                JOptionPane.INFORMATION_MESSAGE));
+        
+        profundidade = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite a profundidade (cm)", "Dado",
+                JOptionPane.INFORMATION_MESSAGE));
+        
+        altura = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite a altura (cm)", "Dado",
+                JOptionPane.INFORMATION_MESSAGE));
+        
+        JOptionPane.showMessageDialog(null, "O volume é = "+
+                totalVolume(largura, profundidade, altura)+"m³","Total",JOptionPane.INFORMATION_MESSAGE);
+        
+    }
+    
+        static float totalVolume (float a, float b, float c)
+        {
+            float result;
+            result = (a * b) * c / 1000000;
+            return (result);
+        }
+}//fim da classe
+      
