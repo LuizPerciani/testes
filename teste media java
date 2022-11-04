@@ -1,0 +1,75 @@
+
+package javaapplication4;
+
+import java.util.Scanner;
+
+
+public class NewClass {
+    public static void main(String[] args) {
+        Scanner leitura = new Scanner(System.in);
+        
+        int quantidade;
+        System.out.printf("Digite a quantidade de pessoas pesquisadas:");
+        quantidade = leitura.nextInt();
+    
+        String[] nome = new String[quantidade];
+        int[] idade = new int [quantidade];
+        double [] altura = new double [quantidade];
+        double media = 0;
+        int qtde_Acima, qtde_Abaixo;
+        int qtde_Percentual;
+        double percentual;
+    
+        for(int contador = 0; contador < quantidade; contador++){
+            System.out.println("Digite o nome:");
+            nome[contador] = leitura.next();
+            System.out.println("Digite a idade:");
+            idade[contador] = leitura.nextInt();
+            System.out.println("Digita a altura:");
+            altura[contador] = leitura.nextDouble();
+            media = media + altura[contador];
+        }
+       
+            media = media / quantidade;
+            System.out.println("A média das alturas é:" +media);
+            qtde_Acima = 0;
+            qtde_Abaixo = 0;
+            for(int contador = 0; contador < quantidade; contador++){
+                if(altura[contador] > media){
+                    qtde_Acima++;
+                }
+                if(altura[contador] < media){
+                    qtde_Abaixo++;
+                }
+            }
+            System.out.println("O número de pessoas que tem altura acima da média é:" + qtde_Acima);
+            System.out.println("O número de pessoas que tem altura abaixo da média é:" + qtde_Abaixo);
+    
+            qtde_Percentual = 0;
+            for(int contador = 0; contador < quantidade; contador++){
+                if(idade[contador] < 18){
+                    qtde_Percentual++;
+                }
+            }
+            percentual = qtde_Percentual * 100 / quantidade;
+            System.out.println("O percentual de pessoas com menos de 18 anos é: " + percentual + "%");
+    }
+}
+            
+        
+
+
+
+        
+    
+
+
+            
+          
+                    
+                
+                
+              
+            
+  
+
